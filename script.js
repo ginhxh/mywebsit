@@ -1,5 +1,23 @@
-const goUpBtn = document.getElementById('go-up-btn');
 
-goUpBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+    const leftButton = document.querySelector('.left');
+    const rightButton = document.querySelector('.right');
+    const cardsContainer = document.querySelector('.allcards');
+
+
+   
+    leftButton.addEventListener('click', () => {
+        cardsContainer.scrollBy({
+            top: 0,
+            left: -100,
+            behavior: "smooth"
+        });
+    });
+
+    rightButton.addEventListener('click', () => {
+        cardsContainer.scrollBy({
+            top: 0,
+            left: 100,
+            behavior: "smooth"
+        });
+    });
+
